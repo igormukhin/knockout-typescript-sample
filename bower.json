@@ -1,0 +1,16 @@
+{
+  "name": "typescript-sample",
+  "authors": [
+    "Igor Mukhin <igor.mukhin@web-dienstleister.de>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "knockout": "~3.4.0",
+    "jquery": "~2.1.4"
+  }
+}

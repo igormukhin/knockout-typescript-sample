@@ -1,0 +1,10 @@
+/bower_components/
+/node_modules/
+/.tmp/
+/typings/
+
+*.iml
+.idea/
+
+/app/scripts/**/*.js
+/app/scripts/**/*.js.map
