@@ -12,10 +12,7 @@ gulp.task('default', ['serve']);
 gulp.task('serve', ['js'], function() {
     browserSync.init({
         server: {
-            baseDir: ['app', '.tmp', 'bower_components'],
-            routes: {
-                '/bower_components': 'bower_components'
-            }
+            baseDir: ['app', '.tmp']
         },
         open: false
     });

@@ -1,3 +1,6 @@
+Knockout-Typescript-Sample
+====================================
+
 Sample website built with TypeScript, KnockoutJS, Browserify, Watchify, Gulp.
 
 Usage:
@@ -6,4 +9,4 @@ Usage:
     bower install
     tsd install
     gulp
-    [then go to http://localhost:3000/]
+    [open http://localhost:3000/]

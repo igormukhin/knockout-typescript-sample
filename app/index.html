@@ -7,14 +7,19 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body>
 
 <h1>Hello, world!</h1>
 
-<div data-bind="text: time"></div>
+<dl class="dl-horizontal">
+    <dt>Time</dt>
+    <dd data-bind="text: time"></dd>
+    <dt>Upper time</dt>
+    <dd data-bind="text: upperTime"></dd>
+</dl>
 
 <button class="btn" data-bind="click: stop">stop</button>
 
