@@ -30,7 +30,7 @@ gulp.task('js', function() {
             plugin: [watchify],
             debug: true
         })
-        .plugin(tsify, { noImplicitAny: true })
+        .plugin(tsify)
         .add('main.ts');
 
     bundler.transform(debowerify);

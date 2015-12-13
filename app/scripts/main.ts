@@ -1,5 +1,4 @@
-/// <reference path="./../../typings/knockout/knockout.d.ts" />
-/// <reference path="./../../typings/jquery/jquery.d.ts" />
+/// <reference path="./references.d.ts" />
 
 import ko = require("knockout");
 import $ = require("jquery");
