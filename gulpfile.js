@@ -4,6 +4,7 @@ var browserify  = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var debowerify = require('debowerify');
+var tsify = require('tsify');
 
 
 gulp.task('default', ['serve']);
@@ -25,12 +26,15 @@ gulp.task('serve', ['js'], function() {
 gulp.task('js', function() {
 
     //global.isWatching ? watchify : browserify;
-    var bundler = browserify('./app/scripts/main', {
-        cache: {},
-        packageCache: {},
-        plugin: [watchify],
-        debug: true
-    });
+    var bundler = browserify({
+            basedir: './app/scripts',
+            cache: {},
+            packageCache: {},
+            plugin: [watchify],
+            debug: true
+        })
+        .plugin(tsify, { noImplicitAny: true })
+        .add('main.ts');
 
     bundler.transform(debowerify);
 
@@ -55,7 +59,7 @@ gulp.task('js', function() {
 
 function handleErrors(err) {
     // print the error (can replace with gulp-util)
-    console.log(err);
+    console.log(err.toString());
 
     // Keep gulp from hanging on this task
     this.emit('end');
