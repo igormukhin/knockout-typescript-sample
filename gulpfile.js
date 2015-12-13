@@ -27,10 +27,9 @@ gulp.task('js', function() {
             basedir: './app/scripts',
             cache: {},
             packageCache: {},
-            plugin: [watchify],
+            plugin: [watchify, tsify],
             debug: true
         })
-        .plugin(tsify)
         .add('main.ts');
 
     bundler.transform(debowerify);

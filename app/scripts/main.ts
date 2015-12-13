@@ -1,22 +1,10 @@
 /// <reference path="./references.d.ts" />
 
-import ko = require("knockout");
-import $ = require("jquery");
+import ko = require('knockout');
 
-class AppModel {
-    time: KnockoutObservable<string>;
-    interval: number;
-    upperTime: KnockoutComputed<string>;
+//import $ = require("jquery");
+//window['jQuery'] = window['$'] = $;
 
-    constructor() {
-        this.time = ko.observable('');
-        this.interval = setInterval(() => { this.time(new Date().toTimeString()); }, 1000);
-        this.upperTime = ko.computed(() => this.time().toUpperCase());
-    }
+import AppViewModel = require('./vm/AppViewModel');
 
-    stop() {
-        clearInterval(this.interval);
-    }
-}
-
-ko.applyBindings(new AppModel());
+ko.applyBindings(new AppViewModel());
