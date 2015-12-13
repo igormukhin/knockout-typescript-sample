@@ -1,8 +1,6 @@
-/// <reference path="./../../../typings/knockout/knockout.d.ts" />
+/// <reference path="./../globals.d.ts" />
 
 "use strict";
-
-import ko = require('knockout');
 
 class AppViewModel {
     time: KnockoutObservable<string>;

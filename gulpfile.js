@@ -12,7 +12,7 @@ gulp.task('default', ['serve']);
 gulp.task('serve', ['js'], function() {
     browserSync.init({
         server: {
-            baseDir: ['app', '.tmp']
+            baseDir: ['app']
         },
         open: false
     });
@@ -45,7 +45,7 @@ gulp.task('js', function() {
             // Specify the desired output filename here.
             .pipe(source('bundle.js'))
             // Specify the output destination
-            .pipe(gulp.dest('./.tmp/js/'))
+            .pipe(gulp.dest('./app/js/'))
             // Reload the browser-sync
             .pipe(browserSync.stream());
     }

@@ -1,9 +1,4 @@
-/// <reference path="./references.d.ts" />
-
-import ko = require('knockout');
-
-//import $ = require("jquery");
-//window['jQuery'] = window['$'] = $;
+/// <reference path="./globals.d.ts" />
 
 import AppViewModel = require('./vm/AppViewModel');
 
